@@ -18,6 +18,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
     background-color: #efffd1;    
     /* background-color: #000; */
@@ -73,14 +75,15 @@ a:active {
 }
 
 h1.head {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 3rem;
+    top: 0rem;
     left: 18rem;
     justify-self: center;
     margin: 0;
     font-size: 8rem;
     color: var(--red);
+    line-height: 8rem;
 }
 
 h1 {
@@ -93,17 +96,20 @@ h1 {
 
 .hero {
     position: relative;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .hero img {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     object-fit: cover;
     /* margin: 0rem 0rem 0rem 0rem; */
 }
 
 .hero .text-wrapper {
+    order: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -111,6 +117,7 @@ h1 {
     right: 0;
     letter-spacing: 2px;
     color: var(--aqua);
+    height: 100vh;
     
     background-color: rgba(0,0,0,0.8);
     background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
@@ -441,3 +448,47 @@ footer p {
         transform: translatex(var(--100X)) translatey(var(--0Y)) rotatez(360deg);
     }
 }
+
+
+/**** mobile first styles ****/
+.panel {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .panel > .image-wrapper {
+    /* make sure the image is dispalyed first   */
+    order: -1;
+    width: 100%;
+  }
+  
+  /* I picked an arbitrary breakpoint for "wider than mobile" */
+  @media (min-width: 600px) {
+    .panel {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  
+    /* use flex-basis (third value in the flex property) to proportionally size the text and image   */
+    .panel > .text-content {
+      flex: 1 1 40%;
+    }
+  
+    .panel > .image-wrapper {
+      flex: 1 1 60%;
+      width: 100%;
+      /* reset the order from mobile view */
+      order: 0;
+    }
+  
+    /* remove the default margin on the h2 so the text aligns with the top of the image  */
+    .panel h2 {
+      margin-top: 0;
+    }
+  
+    /* display the flex-item with class left first  */
+    .panel .left {
+      order: -1;
+    }
+  }
+
