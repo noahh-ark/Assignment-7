@@ -21,9 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
-    background-color: #efffd1;    
-    /* background-color: #000; */
-    line-height: 1.5rem;
+    background-color: #efffd1; 
 }
 
 #mine {
@@ -74,7 +72,7 @@ a:active {
     color: var(--red);
 }
 
-h1.head {
+h1 {
     display: flex;
     position: absolute;
     top: 0rem;
@@ -83,15 +81,8 @@ h1.head {
     margin: 0;
     font-size: 8rem;
     color: var(--red);
-    line-height: 8rem;
-}
-
-h1 {
     font-family: 'Lobster', cursive;
-    font-weight: 1;
-    color: var(--green);
-    font-size: 3rem;
-    display: inline-block;
+    font-weight: lighter;
 }
 
 img {
@@ -102,17 +93,13 @@ img {
 
 .hero {
     position: relative;
-    /* display: flex;
-    flex-direction: row-reverse; */
     height: 100vh;
 }
 
 .hero img {
     display: block;
-    /* width: 100vw; */
     height: 100%;
     object-fit: cover;
-    /* margin: 0rem 0rem 0rem 0rem; */
 }
 
 .hero .text-wrapper {
@@ -120,20 +107,16 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0; */
+
     letter-spacing: 2px;
     color: var(--aqua);
-    /* height: 100vh; */
     
     background-color: rgba(0,0,0,0.8);
     background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
 }
 
 .hero h1 {
-    margin: 40rem 2rem 0rem 2rem;
+    /* margin: 40rem 2rem 0rem 2rem; */
     font-size: 3rem;
 }
 
@@ -143,9 +126,9 @@ img {
 }
 
 main {
-    margin: 0 auto;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     max-width: 70rem;
+    align-self: center;
 }
 
 h2 {
@@ -214,6 +197,7 @@ figcaption {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-around;
+    align-items: center;
     margin-bottom: 8rem;
 }
 
@@ -229,7 +213,8 @@ figcaption {
 
 .card img {
     width: 330px;
-    max-height: 330px;
+    /* max-height: 330px; */
+    height: auto;
     transition: transform 300ms, filter 200ms;
     display: flex;
 }
