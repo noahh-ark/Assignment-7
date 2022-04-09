@@ -24,7 +24,7 @@ body {
     background-color: #efffd1; 
 }
 
-#mine {
+/* #mine {
     position: absolute;
     top: 0.1rem;
     left: 6rem;
@@ -33,8 +33,7 @@ body {
     margin: 0;
     width: 20%;
     display: inline-block;
-    /* border: solid; */
-}
+} */
 
 .svg {
     width: 20%;
