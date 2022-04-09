@@ -1,8 +1,8 @@
-@property --rotate {
+/* @property --rotate {
     syntax: "<angle>";
     inherits: false;
     initial-value: 132deg;
-}
+} */
   
 * {
     box-sizing: border-box;
@@ -201,7 +201,8 @@ figcaption {
 
 .cards {
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-around;
     margin-bottom: 8rem;
@@ -490,5 +491,16 @@ footer p {
     .panel .left {
       order: -1;
     }
-  }
 
+    /* .cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex: 1 1 40%;
+    } */
+  }
+  
+  /* @media (min-width: 900px) {
+    .cards {
+      flex: 1 1 25%;
+    }
+  } */
