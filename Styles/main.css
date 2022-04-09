@@ -94,30 +94,39 @@ h1 {
     display: inline-block;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
 .hero {
     position: relative;
-    display: flex;
-    flex-direction: row-reverse;
+    /* display: flex;
+    flex-direction: row-reverse; */
+    height: 100vh;
 }
 
 .hero img {
     display: block;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    height: 100%;
     object-fit: cover;
     /* margin: 0rem 0rem 0rem 0rem; */
 }
 
 .hero .text-wrapper {
-    order: -1;
-    position: absolute;
-    top: 0;
+    order: -100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
+    right: 0; */
     letter-spacing: 2px;
     color: var(--aqua);
-    height: 100vh;
+    /* height: 100vh; */
     
     background-color: rgba(0,0,0,0.8);
     background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
