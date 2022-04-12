@@ -84,6 +84,7 @@ header {
 }
 
 nav {
+    z-index: 1;
     justify-content: center;
     width: 100%;
 
