@@ -103,7 +103,7 @@ h1 {
     justify-content: center;
     flex: 100%;
 
-    margin: 0;
+    margin: 0 0 1rem 1rem;
     font-size: 4rem;
     color: var(--red);
     font-family: 'Lobster', cursive;
@@ -192,15 +192,14 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 figcaption {
     float: right;
     position: relative;
     font-style: italic;
-    margin-top: -2.2rem;
-    margin-right: 1rem;
+    margin-top: -1.5rem;
+    margin-right: 0.5rem;
     color: #fff;
 }
 
@@ -324,16 +323,6 @@ footer p {
     font-size: 0.8rem;
 }
 
-
-
-
-
-/* CSS BREAK
-*************
-*************
-*************
- */
-
 .profile main {
     display: flex;
     flex-direction: column;
@@ -453,56 +442,65 @@ footer p {
 }
 
 
-/**** mobile first styles ****/
 .panel {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .panel > .image-wrapper {
-    /* make sure the image is dispalyed first   */
+.panel > .image-wrapper {
     order: -1;
     width: 100%;
-  }
+}
   
-  /* I picked an arbitrary breakpoint for "wider than mobile" */
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
     .panel {
-      flex-direction: row;
-      gap: 2rem;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 1rem;
     }
   
-    /* use flex-basis (third value in the flex property) to proportionally size the text and image   */
     .panel > .text-content {
-      flex: 1 1 40%;
+        flex: 1 1 40%;
     }
   
     .panel > .image-wrapper {
-      flex: 1 1 60%;
-      width: 100%;
-      /* reset the order from mobile view */
-      order: 0;
+        flex: 1 1 60%;
+        width: 100%;
+        order: 0;
     }
   
-    /* remove the default margin on the h2 so the text aligns with the top of the image  */
     .panel h2 {
-      margin-top: 0;
+        margin-top: 0;
     }
   
-    /* display the flex-item with class left first  */
     .panel .left {
-      order: -1;
+        order: -1;
     }
 
-    /* .cards {
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex: 1 1 40%;
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }  
+    .card {
+        flex: 1 1 40%;
+    }
+
+    .figure {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* .figure > img {
+        width: 100%;
+        height: auto;
+        display: block;
     } */
-  }
+
+}
   
   /* @media (min-width: 900px) {
     .cards {
-      flex: 1 1 25%;
+        flex: 1 1 25%;
     }
-  } */
+} */
