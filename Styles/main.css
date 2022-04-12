@@ -65,7 +65,7 @@ img {
 
 .hero .head {
     position: absolute;
-    inset: 0;
+    inset: 0 0 0 0;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -89,7 +89,6 @@ nav {
 
     line-height: 1.5rem;
     margin: 0 0 0 -1rem;
-
 }
 nav ul {
     color: var(--aqua);
@@ -109,7 +108,6 @@ h1 {
     font-family: 'Lobster', cursive;
     font-weight: lighter;
 }
-
 
 /* .hero .text-wrapper {
     order: -100;
@@ -224,7 +222,6 @@ figcaption {
     background: white;
     padding: 0.5rem;
     border-radius: 6px;
-    font-size: 1.5em;
     color: rgba(88, 250, 96, 0);
     cursor: pointer;
 }
@@ -245,7 +242,7 @@ figcaption {
 .overlay {
     color: whitesmoke;
     opacity: 0;
-    font-size: 2.7rem;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     transition: opacity 500ms;
